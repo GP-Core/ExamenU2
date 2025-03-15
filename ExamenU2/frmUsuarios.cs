@@ -41,6 +41,7 @@ namespace ExamenU2
         {
             frmMenu menu = new frmMenu();
             menu.Show();
+            this.Dispose();
 
         }
 
