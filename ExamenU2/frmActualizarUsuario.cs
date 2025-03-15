@@ -43,7 +43,7 @@ namespace ExamenU2
         {
             try
             {
-                int tel = int.Parse(txtTelefono.Text);
+                int.Parse(txtTelefono.Text);
                 Datos datos = new Datos();
                 bool x = validarcorreo(txtCorreo.Text);
                 if (!x)
