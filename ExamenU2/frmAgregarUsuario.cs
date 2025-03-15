@@ -63,6 +63,8 @@ namespace ExamenU2
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            frmUsuarios usuarios = new frmUsuarios();
+            usuarios.Show();
         }
     }
 }
