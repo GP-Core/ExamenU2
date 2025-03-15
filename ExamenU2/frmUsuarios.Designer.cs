@@ -68,7 +68,6 @@
             dgvUsuarios.Size = new Size(854, 358);
             dgvUsuarios.TabIndex = 0;
             dgvUsuarios.CellClick += dgvUsuarios_CellClick;
-          
             // 
             // label1
             // 
@@ -115,6 +114,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "frmUsuarios";
             Text = "USUARIOS";
+            Activated += frmUsuarios_Activated;
             Load += frmUsuarios_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

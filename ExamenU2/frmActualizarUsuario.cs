@@ -43,7 +43,7 @@ namespace ExamenU2
         {
             try
             {
-                int.Parse(txtTelefono.Text);
+                
                 Datos datos = new Datos();
                 bool x = validarcorreo(txtCorreo.Text);
                 if (!x)
@@ -52,8 +52,8 @@ namespace ExamenU2
                     return;
                 }
                 bool f = datos.comando("update USUARIOS set NOMBRE = '" + txtNombre.Text + "" +
-                    "', APATERNO = '" + txtAPaterno.Text + "', AMATERNO = '" + txtAMaterno + "'," +
-                    " TELEFONO = '" + txtTelefono.Text + "', CORREO = '" + txtCorreo + "' where ID = " + txtID.Text + " ");
+                    "', APATERNO = '" + txtAPaterno.Text + "', AMATERNO = '" + txtAMaterno.Text + "'," +
+                    " TELEFONO = '" + long.Parse(txtTelefono.Text) + "', CORREO = '" + txtCorreo.Text + "' where ID = " + txtID.Text + " ");
 
                 if (f)
                 {
