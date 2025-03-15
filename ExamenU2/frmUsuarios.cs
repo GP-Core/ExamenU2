@@ -41,7 +41,23 @@ namespace ExamenU2
         {
             frmMenu menu = new frmMenu();
             menu.Show();
-            this.Dispose();
+          
         }
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmActualizarUsuario actualizarUsuario = new frmActualizarUsuario(dgvUsuarios[0, e.RowIndex].Value.ToString(),
+            dgvUsuarios[1, e.RowIndex].Value.ToString(), dgvUsuarios[2, e.RowIndex].Value.ToString(), dgvUsuarios[3, e.RowIndex].Value.ToString()
+            , dgvUsuarios[4, e.RowIndex].Value.ToString(), dgvUsuarios[5, e.RowIndex].Value.ToString());
+            actualizarUsuario.Show();
+    
+        }
+
+     
     }
 }

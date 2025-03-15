@@ -29,33 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarUsuario));
-            textBox1 = new TextBox();
+            txtID = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtNombre = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtAPaterno = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            txtAMaterno = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
+            txtCorreo = new TextBox();
             label6 = new Label();
-            textBox6 = new TextBox();
+            txtTelefono = new TextBox();
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnActualizar = new Button();
+            btnEliminar = new Button();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // txtID
             // 
-            textBox1.Enabled = false;
-            textBox1.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(93, 163);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(259, 28);
-            textBox1.TabIndex = 0;
+            txtID.Enabled = false;
+            txtID.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtID.Location = new Point(93, 163);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(259, 28);
+            txtID.TabIndex = 0;
             // 
             // label1
             // 
@@ -77,13 +79,13 @@
             label2.TabIndex = 3;
             label2.Text = "NOMBRE";
             // 
-            // textBox2
+            // txtNombre
             // 
-            textBox2.Font = new Font("Arial Narrow", 10.8F);
-            textBox2.Location = new Point(93, 234);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(259, 28);
-            textBox2.TabIndex = 2;
+            txtNombre.Font = new Font("Arial Narrow", 10.8F);
+            txtNombre.Location = new Point(93, 234);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(259, 28);
+            txtNombre.TabIndex = 2;
             // 
             // label3
             // 
@@ -95,13 +97,13 @@
             label3.TabIndex = 5;
             label3.Text = "APELLIDO PATERNO";
             // 
-            // textBox3
+            // txtAPaterno
             // 
-            textBox3.Font = new Font("Arial Narrow", 10.8F);
-            textBox3.Location = new Point(93, 302);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(259, 28);
-            textBox3.TabIndex = 4;
+            txtAPaterno.Font = new Font("Arial Narrow", 10.8F);
+            txtAPaterno.Location = new Point(93, 302);
+            txtAPaterno.Name = "txtAPaterno";
+            txtAPaterno.Size = new Size(259, 28);
+            txtAPaterno.TabIndex = 4;
             // 
             // label4
             // 
@@ -113,13 +115,13 @@
             label4.TabIndex = 7;
             label4.Text = "APELLIDO MATERNO";
             // 
-            // textBox4
+            // txtAMaterno
             // 
-            textBox4.Font = new Font("Arial Narrow", 10.8F);
-            textBox4.Location = new Point(93, 376);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(259, 28);
-            textBox4.TabIndex = 6;
+            txtAMaterno.Font = new Font("Arial Narrow", 10.8F);
+            txtAMaterno.Location = new Point(93, 376);
+            txtAMaterno.Name = "txtAMaterno";
+            txtAMaterno.Size = new Size(259, 28);
+            txtAMaterno.TabIndex = 6;
             // 
             // label5
             // 
@@ -131,13 +133,13 @@
             label5.TabIndex = 11;
             label5.Text = "CORREO ";
             // 
-            // textBox5
+            // txtCorreo
             // 
-            textBox5.Font = new Font("Arial Narrow", 10.8F);
-            textBox5.Location = new Point(93, 512);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(259, 28);
-            textBox5.TabIndex = 10;
+            txtCorreo.Font = new Font("Arial Narrow", 10.8F);
+            txtCorreo.Location = new Point(93, 512);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(259, 28);
+            txtCorreo.TabIndex = 10;
             // 
             // label6
             // 
@@ -149,13 +151,13 @@
             label6.TabIndex = 9;
             label6.Text = "TELEFONO";
             // 
-            // textBox6
+            // txtTelefono
             // 
-            textBox6.Font = new Font("Arial Narrow", 10.8F);
-            textBox6.Location = new Point(93, 445);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(259, 28);
-            textBox6.TabIndex = 8;
+            txtTelefono.Font = new Font("Arial Narrow", 10.8F);
+            txtTelefono.Location = new Point(93, 445);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(259, 28);
+            txtTelefono.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -172,44 +174,76 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(btnActualizar, 0, 0);
-            tableLayoutPanel1.Location = new Point(93, 546);
+            tableLayoutPanel1.Controls.Add(btnEliminar, 0, 1);
+            tableLayoutPanel1.Controls.Add(btnCancelar, 0, 2);
+            tableLayoutPanel1.Location = new Point(93, 576);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(250, 125);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 48.0769234F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 51.9230766F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 41F));
+            tableLayoutPanel1.Size = new Size(259, 125);
             tableLayoutPanel1.TabIndex = 13;
             // 
             // btnActualizar
             // 
+            btnActualizar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnActualizar.Cursor = Cursors.Hand;
+            btnActualizar.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold);
             btnActualizar.Location = new Point(3, 3);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(94, 29);
+            btnActualizar.Size = new Size(253, 34);
             btnActualizar.TabIndex = 0;
-            btnActualizar.Text = "button1";
+            btnActualizar.Text = "ACTUALIZAR";
             btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnEliminar.Cursor = Cursors.Hand;
+            btnEliminar.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold);
+            btnEliminar.Location = new Point(3, 43);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(253, 37);
+            btnEliminar.TabIndex = 1;
+            btnEliminar.Text = "ELIMINAR";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnCancelar.Cursor = Cursors.Hand;
+            btnCancelar.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold);
+            btnCancelar.Location = new Point(3, 86);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(253, 36);
+            btnCancelar.TabIndex = 2;
+            btnCancelar.Text = "CANCELAR";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // frmActualizarUsuario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(249, 237, 237);
-            ClientSize = new Size(453, 698);
+            ClientSize = new Size(453, 713);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
             Controls.Add(label5);
-            Controls.Add(textBox5);
+            Controls.Add(txtCorreo);
             Controls.Add(label6);
-            Controls.Add(textBox6);
+            Controls.Add(txtTelefono);
             Controls.Add(label4);
-            Controls.Add(textBox4);
+            Controls.Add(txtAMaterno);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(txtAPaterno);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtNombre);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtID);
             Name = "frmActualizarUsuario";
             Text = "Actualizar Información";
             Load += frmActualizarUsuario_Load;
@@ -221,20 +255,22 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtID;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtNombre;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtAPaterno;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox txtAMaterno;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox txtCorreo;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox txtTelefono;
         private PictureBox pictureBox1;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnActualizar;
+        private Button btnEliminar;
+        private Button btnCancelar;
     }
 }

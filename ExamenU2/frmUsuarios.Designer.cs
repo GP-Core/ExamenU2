@@ -67,6 +67,8 @@
             dgvUsuarios.RowHeadersWidth = 51;
             dgvUsuarios.Size = new Size(854, 358);
             dgvUsuarios.TabIndex = 0;
+            dgvUsuarios.CellClick += dgvUsuarios_CellClick;
+          
             // 
             // label1
             // 
@@ -90,6 +92,7 @@
             btnAgregarUsuario.TabIndex = 2;
             btnAgregarUsuario.Text = "INGRESAR NUEVO USUARIO";
             btnAgregarUsuario.UseVisualStyleBackColor = true;
+            btnAgregarUsuario.Click += btnAgregarUsuario_Click;
             // 
             // btnMenu
             // 
